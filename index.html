@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skills Connection Platform - Wireframes</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: #f5f7f9;
+            color: #333;
+            line-height: 1.6;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2c3e50;
+            margin-bottom: 30px;
+        }
+        
+        h2 {
+            color: #3498db;
+            border-bottom: 2px solid #3498db;
+            padding-bottom: 10px;
+            margin-top: 40px;
+        }
+        
+        h3 {
+            color: #2c3e50;
+            margin: 20px 0 10px;
+        }
+        
+        .wireframe {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin: 20px 0;
+            background: #fafafa;
+        }
+        
+        .section {
+            border: 1px dashed #bbb;
+            margin: 15px 0;
+            padding: 15px;
+            border-radius: 5px;
+            background: white;
+        }
+        
+        .placeholder {
+            background: #eee;
+            border: 1px dashed #ccc;
+            padding: 20px;
+            text-align: center;
+            color: #777;
+            margin: 10px 0;
+        }
+        
+        .nav-bar {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px;
+            background: #2c3e50;
+            color: white;
+        }
+        
+        .nav-links {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .button {
+            background: #3498db;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 4px;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .hero {
+            text-align: center;
+            padding: 40px 20px;
+        }
+        
+        .dashboard {
+            display: flex;
+            gap: 20px;
+        }
+        
+        .sidebar {
+            flex: 1;
+            background: #f0f0f0;
+            padding: 15px;
+            border-radius: 5px;
+        }
+        
+        .main-content {
+            flex: 3;
+        }
+        
+        .card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 15px;
+            margin-bottom: 15px;
+            background: white;
+        }
+        
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 15px;
+            margin: 15px 0;
+        }
+        
+        .annotation {
+            background: #fff8e1;
+            border-left: 4px solid #ffc107;
+            padding: 10px 15px;
+            margin: 10px 0;
+            font-size: 0.9em;
+        }
+        
+        .page-tabs {
+            display: flex;
+            margin-bottom: 20px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .tab {
+            padding: 10px 20px;
+            cursor: pointer;
+            background: #f0f0f0;
+            border: 1px solid #ddd;
+            border-bottom: none;
+            border-radius: 5px 5px 0 0;
+            margin-right: 5px;
+        }
+        
+        .tab.active {
+            background: white;
+            border-bottom: 1px solid white;
+            margin-bottom: -1px;
+        }
+        
+        .page-content {
+            display: none;
+        }
+        
+        .page-content.active {
+            display: block;
+        }
+        
+        @media (max-width: 768px) {
+            .dashboard {
+                flex-direction: column;
+            }
+            
+            .grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Skills Connection Platform - Wireframes</h1>
+        
+        <div class="page-tabs">
+            <div class="tab active" onclick="showPage(0)">Landing Page</div>
+            <div class="tab" onclick="showPage(1)">Student Dashboard</div>
+            <div class="tab" onclick="showPage(2)">Private Sector Dashboard</div>
+        </div>
+        
+        <!-- Landing Page Wireframe -->
+        <div class="page-content active">
+            <h2>Landing Page (Homepage)</h2>
+            
+            <div class="wireframe">
+                <div class="nav-bar">
+                    <div class="logo">Logo</div>
+                    <div class="nav-links">
+                        <span>Home</span>
+                        <span>About</span>
+                        <span>Private Sector</span>
+                        <span>Donation</span>
+                        <span>Contact</span>
+                    </div>
+                    <div>
+                        <span class="button">Login</span>
+                        <span class="button">Sign Up</span>
+                    </div>
+                </div>
+                
+                <div class="section hero">
+                    <h3>Connecting Youth, Training Centers & Private Sector for Skills of Tomorrow</h3>
+                    <p>Brief introduction text about the platform's mission and value proposition.</p>
+                    <div class="button">Join Now</div>
+                    <div class="button">Discover Opportunities</div>
+                </div>
+                
+                <div class="section">
+                    <h3>Testimonials</h3>
+                    <div class="grid">
+                        <div class="card">
+                            <h4>Student Success Story</h4>
+                            <p>"This platform helped me find the perfect training program..."</p>
+                        </div>
+                        <div class="card">
+                            <h4>Company Success Story</h4>
+                            <p>"We found highly skilled employees through this platform..."</p>
+                        </div>
+                        <div class="card">
+                            <h4>Training Center Story</h4>
+                            <p>"We've connected with industry partners to improve our curriculum..."</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="section">
+                    <h3>Donation Section</h3>
+                    <p>Support training, scholarships, and volunteer programs</p>
+                    <div class="placeholder">Secure Donation Gateway</div>
+                </div>
+                
+                <div class="section">
+                    <h3>Upcoming Events</h3>
+                    <div class="grid">
+                        <div class="card">
+                            <h4>Workshop: Digital Skills</h4>
+                            <p>Date: June 15, 2023</p>
+                        </div>
+                        <div class="card">
+                            <h4>Job Fair: Tech Industry</h4>
+                            <p>Date: July 22, 2023</p>
+                        </div>
+                        <div class="card">
+                            <h4>Hackathon: Green Solutions</h4>
+                            <p>Date: August 10, 2023</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="annotation">
+                <strong>Note:</strong> This wireframe shows the structure of the landing page with all required sections. 
+                The actual implementation should include proper styling and responsive design.
+            </div>
+        </div>
+        
+        <!-- Student Dashboard Wireframe -->
+        <div class="page-content">
+            <h2>Student Dashboard</h2>
+            
+            <div class="wireframe">
+                <div class="nav-bar">
+                    <div class="logo">Student Dashboard</div>
+                    <div class="nav-links">
+                        <span>Profile</span>
+                        <span>Training Centers</span>
+                        <span>Career Match</span>
+                        <span>Opportunities</span>
+                    </div>
+                    <div>
+                        <span>Welcome, Student!</span>
+                        <span class="button">Logout</span>
+                    </div>
+                </div>
+                
+                <div class="dashboard">
+                    <div class="sidebar">
+                        <h4>Quick Actions</h4>
+                        <div class="button">Update Profile</div>
+                        <div class="button">Browse Courses</div>
+                        <div class="button">View Matches</div>
+                        
+                        <h4>Notifications</h4>
+                        <div class="card">
+                            <p>New internship opportunity</p>
+                        </div>
+                        <div class="card">
+                            <p>Workshop invitation</p>
+                        </div>
+                    </div>
+                    
+                    <div class="main-content">
+                        <div class="section">
+                            <h3>My Profile</h3>
+                            <div class="placeholder">
+                                Personal info, skills, career interests, CV/resume upload
+                            </div>
+                        </div>
+                        
+                        <div class="section">
+                            <h3>Discover Training Centers</h3>
+                            <div class="grid">
+                                <div class="card">
+                                    <h4>Web Development Bootcamp</h4>
+                                    <p>Center: Tech Skills Institute</p>
+                                </div>
+                                <div class="card">
+                                    <h4>Data Analytics Course</h4>
+                                    <p>Center: Data Science Academy</p>
+                                </div>
+                                <div class="card">
+                                    <h4>Digital Marketing Program</h4>
+                                    <p>Center: Business Skills Center</p>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="section">
+                            <h3>AI Career Match</h3>
+                            <div class="placeholder">
+                                Smart recommendations based on skills & interests
+                            </div>
+                        </div>
+                        
+                        <div class="section">
+                            <h3>Volunteer & Internship Opportunities</h3>
+                            <div class="grid">
+                                <div class="card">
+                                    <h4>Virtual Internship: Tech Company</h4>
+                                    <p>Remote, 3 months</p>
+                                </div>
+                                <div class="card">
+                                    <h4>Local Community Project</h4>
+                                    <p>City Center, weekends</p>
+                                </div>
+                                <div class="card">
+                                    <h4>International Volunteer Program</h4>
+                                    <p>6 weeks, South America</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="annotation">
+                <strong>Note:</strong> The student dashboard provides access to all features students need. 
+                The sidebar offers quick navigation, while the main content area displays detailed information.
+            </div>
+        </div>
+        
+        <!-- Private Sector Dashboard Wireframe -->
+        <div class="page-content">
+            <h2>Private Sector Dashboard</h2>
+            
+            <div class="wireframe">
+                <div class="nav-bar">
+                    <div class="logo">Company Dashboard</div>
+                    <div class="nav-links">
+                        <span>Opportunities</span>
+                        <span>Curriculum</span>
+                        <span>Events</span>
+                        <span>Subventions</span>
+                    </div>
+                    <div>
+                        <span>Welcome, Company Representative!</span>
+                        <span class="button">Logout</span>
+                    </div>
+                </div>
+                
+                <div class="dashboard">
+                    <div class="sidebar">
+                        <h4>Quick Actions</h4>
+                        <div class="button">Post Opportunity</div>
+                        <div class="button">Suggest Curriculum</div>
+                        <div class="button">Plan Event</div>
+                        <div class="button">Create Subvention</div>
+                    </div>
+                    
+                    <div class="main-content">
+                        <div class="section">
+                            <h3>Post Opportunities</h3>
+                            <div class="placeholder">
+                                Form to post jobs, internships, apprenticeships
+                            </div>
+                        </div>
+                        
+                        <div class="section">
+                            <h3>Suggest Curriculum Updates</h3>
+                            <div class="placeholder">
+                                Form to recommend skills & courses to align with industry demand
+                            </div>
+                        </div>
+                        
+                        <div class="section">
+                            <h3>Plan Events</h3>
+                            <div class="placeholder">
+                                Interface to schedule company open days, training center visits, career fairs
+                            </div>
+                        </div>
+                        
+                        <div class="section">
+                            <h3>Subvention Programs</h3>
+                            <div class="placeholder">
+                                Interface to support and sponsor TVET initiatives, scholarships, or equipment
+                            </div>
+                        </div>
+                        
+                        <div class="section">
+                            <h3>Communication System</h3>
+                            <div class="placeholder">
+                                Automated email & notification system to reach multiple private sectors at once
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="annotation">
+                <strong>Note:</strong> The private sector dashboard focuses on tools for companies to engage with the platform.
+                Each section provides specific functionality for different types of interactions.
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function showPage(index) {
+            // Hide all page contents
+            const pages = document.querySelectorAll('.page-content');
+            pages.forEach(page => page.classList.remove('active'));
+            
+            // Show selected page
+            pages[index].classList.add('active');
+            
+            // Update tabs
+            const tabs = document.querySelectorAll('.tab');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            tabs[index].classList.add('active');
+        }
+    </script>
+</body>
+</html>
